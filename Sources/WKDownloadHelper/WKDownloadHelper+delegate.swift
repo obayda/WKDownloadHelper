@@ -43,7 +43,7 @@ extension WKDownloadHelper: WKNavigationDelegate {
         }
         if let mimeType = navigationResponse.response.mimeType {
             if isMimeTypeConfigured(mimeType) {
-                if #available(iOS 14.5, *) {
+                if #available(iOS 15.0, *) {
                     decisionHandler(.download)
                 } else {
                     var fileName = getDefaultFileName(forMimeType: mimeType)
