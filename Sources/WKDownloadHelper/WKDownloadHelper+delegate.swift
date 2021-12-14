@@ -65,13 +65,13 @@ extension WKDownloadHelper: WKNavigationDelegate {
         decisionHandler(.allow)
     }
     
-    @available(iOS 14.5, *)
+    @available(iOS 15.0, *)
     public func webView(_ webView: WKWebView, navigationResponse: WKNavigationResponse, didBecome download: WKDownload) {
         download.delegate = self
     }
 }
 
-@available(iOS 14.5, *)
+@available(iOS 15.0, *)
 extension WKDownloadHelper: WKDownloadDelegate {
     public func download(_ download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String, completionHandler: @escaping (URL?) -> Void) {
         let temporaryDir = NSTemporaryDirectory()
